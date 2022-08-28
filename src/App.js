@@ -15,7 +15,7 @@ function App() {
           <Main />
         </Wrapper>
       </TabContext.Provider>
-      <Backdrop></Backdrop>
+      <Backdrop />
     </>
   );
 }

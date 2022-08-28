@@ -12,9 +12,9 @@ const Main = () => {
     <Wrapper>
       <TopBar />
       <MainContent>
-        {selected === 'chat' && (
-          <>
-            {settings.chat.map(({ id, name, description, type, options }) => {
+        {selected === 'info'
+          ? 'In development'
+          : settings[selected].map(({ id, name, description, type, options }) => {
               return (
                 <Option
                   name={name}
@@ -26,41 +26,6 @@ const Main = () => {
                 />
               );
             })}
-          </>
-        )}
-        {selected === 'usercard' && (
-          <>
-            {settings.usercard.map(({ id, name, description, type, options }) => {
-              return (
-                <Option
-                  name={name}
-                  description={description}
-                  id={id}
-                  type={type}
-                  options={options}
-                  key={id}
-                />
-              );
-            })}
-          </>
-        )}
-        {selected === 'video' && (
-          <>
-            {settings.video.map(({ id, name, description, type, options }) => {
-              return (
-                <Option
-                  name={name}
-                  description={description}
-                  id={id}
-                  type={type}
-                  options={options}
-                  key={id}
-                />
-              );
-            })}
-          </>
-        )}
-        {selected === 'info' && 'In development'}
       </MainContent>
     </Wrapper>
   );
